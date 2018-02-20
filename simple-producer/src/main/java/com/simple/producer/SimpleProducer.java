@@ -32,7 +32,7 @@ public class SimpleProducer {
     props.put("retries", 0);
     
     //Specify buffer size in config
-    props.put("batch.size", 16384);
+    props.put("batch.size", 5242880);
     
     //Reduce the no of requests less than 0   
     props.put("linger.ms", 1);
