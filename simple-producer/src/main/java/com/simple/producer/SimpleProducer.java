@@ -23,7 +23,7 @@ public class SimpleProducer {
     Properties props = new Properties();
     
     //Assign localhost id
-    props.put("bootstrap.servers", "selma-Inspiron-5559");
+    props.put("bootstrap.servers", "selma-Inspiron-5559:6667");
     
     //Set acknowledgements for producer requests.      
     props.put("acks", "all");
@@ -41,10 +41,10 @@ public class SimpleProducer {
     props.put("buffer.memory", 33554432);
     
     props.put("key.serializer", 
-       "org.apache.kafka.common.serializa-tion.StringSerializer");
+       "org.apache.kafka.common.serialization.StringSerializer");
        
     props.put("value.serializer", 
-       "org.apache.kafka.common.serializa-tion.StringSerializer");
+       "org.apache.kafka.common.serialization.StringSerializer");
     
     Producer<String, String> producer = new KafkaProducer
        <String, String>(props);
